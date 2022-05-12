@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My rezume</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f5f7fa;
+      }
+      .main-container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1200px;
+        background-color: #fff;
+        margin: 40px auto;
+        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+      }
+      /* Main conteiner */
+      .about-me-profession {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000;
+      }
+      .main-content-sections {
+        padding: 100px 90px 90px 100px;
+      }
+      .main-content-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: black;
+        margin-bottom: 10px;
+      }
+      /* About me section */
+      .about-me-section {
+        margin-bottom: 40px;
+      }
+      .about-me-profession {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: black;
+        margin-bottom: 20px;
+      }
+      .about-me-name {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 55px;
+        color: black;
+        margin-bottom: 25px;
+      }
+      .about-me-description {
+        width: 400px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #595959;
+      }
+      /* My project section */
+      .my-projects-section {
+        margin-bottom: 50px;
+      }
+      .my-project-list {
+        padding: 0px 0px 0px 17px;
+      }
+      .my-project-item {
+        color: black;
+        font-weight: bold;
+      }
+      .my-project-link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #595959;
+      }
+      .my-project-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #595959;
+        margin-left: 5px;
+      }
+      .my-project-brecket {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: black;
+      }
+      /* My work experience */
+      .my-work-experience-company {
+        color: #fb6d3a;
+      }
+      .my-work-experience-position {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 10px 0px 10px 0px;
+      }
+      .my-work-experience-period {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #a8a8a8;
+        margin: 0px 0px 10px 0px;
+      }
+      .my-work-experience-divider {
+        color: black;
+      }
+      .my-work-experience-duties {
+        padding: 0px 0px 0px 18px;
+      }
+      .my-work-experience-duty {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #595959;
+      }
+      .my-work-experience-company-block {
+        width: 525px;
+        margin: 0px 0px 15px 0px;
+      }
+      .education {
+        width: 327px;
+        margin-top: 40px;
+      }
+      /* Sidebar sections */
+      .sidebar-sections {
+        background-color: #1e2939;
+        width: 370px;
+        padding-top: 40px;
+      }
+      .contacts-section {
+        margin: 50px 0px 0px 40px;
+      }
+      .tech-skills-section {
+        margin: 50px 0px 0px 40px;
+      }
+      .soft-skills-section {
+        margin: 50px 0px 0px 40px;
+      }
+      .sidebar-section {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: white;
+        margin: 10px;
+      }
+      /* Contact section */
+      .contact-section-type {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: white;
+        margin-right: 7px;
+      }
+      .contact-section-link {
+        color: #565e6a;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      /* Tech skills section */
+      .tech-skills-list {
+        padding-left: 17px;
+      }
+      .tech-skills-item {
+        color: #fb6d3a;
+      }
+      .tech-skills-item-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: white;
+      }
+      /* Soft skills section */
+      .soft-skills-list {
+        padding-left: 17px;
+      }
+      .soft-skills-item {
+        color: #fb6d3a;
+      }
+      .soft-skills-item-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: white;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <!--Main container-->
+    <div class="main-container">
+      <!--Main content sections-->
+      <div class="main-content-sections">
+        <!--About me section -->
+        <div class="about-me-section">
+          <h2 class="about-me-profession">Front-End Developer</h2>
+          <h1 class="about-me-name">Andrei Birul</h1>
+          <p class="about-me-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravvida. Risus commodo viverra maecenas
+            accumsan lacus vel facilisis.
+          </p>
+        </div>
+        <!--My projects section-->
+        <div class="my-projects-section">
+          <h3 class="main-content-title">Projects</h3>
+          <ol class="my-project-list">
+            <li class="my-project-item">
+              <span class="my-project-text">
+                <a
+                  href="https://hellenglish.goit.global/"
+                  class="my-project-link"
+                  >https://hellenglish.goit.global/</a
+                >
+                ...................
+                <span class="my-project-brecket">[</span> HTML5, CSS3
+                <span class="my-project-brecket">]</span>
+              </span>
+            </li>
+            <li class="my-project-item">
+              <span class="my-project-text">
+                <a href="https://cryptohub.goit.global/" class="my-project-link"
+                  >https://cryptohub.goit.global/</a
+                >
+                .....................
+                <span class="my-project-brecket">[</span> JavaScript
+                <span class="my-project-brecket">]</span>
+              </span>
+            </li>
+            <li class="my-project-item">
+              <span class="my-project-text">
+                <a href="https://kidslike.goit.global/" class="my-project-link"
+                  >https://kidslike.goit.global/
+                </a>
+                ............................
+                <span class="my-project-brecket">[</span> React.js, Node.js
+                <span class="my-project-brecket">]</span>
+              </span>
+            </li>
+          </ol>
+        </div>
+        <!--My work experience-->
+        <div class="my-work-experience">
+          <h3 class="main-content-title">Work Experience</h3>
+          <!--Company 1-->
+          <div class="my-work-experience-company-block">
+            <h4 class="my-work-experience-position">
+              Front-End Developer
+              <span class="my-work-experience-company">Freelance</span>
+            </h4>
+            <p class="my-work-experience-period">
+              September 2019 - up to now
+              <span class="my-work-experience-divider">|</span> Country
+            </p>
+            <ul class="my-work-experience-duties">
+              <li class="my-work-experience-duty">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </li>
+              <li class="my-work-experience-duty">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="my-work-experience-duty">
+                Risus commodo viverra maecenas.
+              </li>
+              <li class="my-work-experience-duty">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </li>
+            </ul>
+          </div>
+          <!--Company 2-->
+          <div class="my-work-experience-company-block">
+            <h4 class="my-work-experience-position">
+              Manager
+              <span class="my-work-experience-company">Roga & Kopyta New</span>
+            </h4>
+            <p class="my-work-experience-period">
+              March 2015 - October 2018
+              <span class="my-work-experience-divider">|</span> Country
+            </p>
+            <ul class="my-work-experience-duties">
+              <li class="my-work-experience-duty">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod labore et dolore magna aliqua.
+              </li>
+              <li class="my-work-experience-duty">
+                Quis ipsum suspendisse ultrices gravida.
+              </li>
+              <li class="my-work-experience-duty">
+                Risus commodo viverra maecenas.
+              </li>
+            </ul>
+          </div>
+          <!--Company 3-->
+          <div class="my-work-experience-company-block">
+            <h4 class="my-work-experience-position">
+              Manager
+              <span class="my-work-experience-company">Roga & Kopyta LLC</span>
+            </h4>
+            <p class="my-work-experience-period">
+              June 2014 - February 2015
+              <span class="my-work-experience-divider">|</span> Country
+            </p>
+            <ul class="my-work-experience-duties">
+              <li class="my-work-experience-duty">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="my-work-experience-duty">
+                Quis ipsum suspendisse ultrices gravida.
+              </li>
+              <li class="my-work-experience-duty">
+                Risus commodo viverra maecenas.
+              </li>
+            </ul>
+          </div>
+          <!--Education-->
+          <div class="education">
+            <h3 class="main-content-title">Education</h3>
+            <h4>
+              <span class="my-work-experience-company"
+                >National University of Radioelectronics</span
+              >
+            </h4>
+            <h4 class="my-work-experience-position">Management</h4>
+            <p class="my-work-experience-period">
+              September 2009 - June 2014
+              <span class="my-work-experience-divider">|</span> Country
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Sidebar section-->
+      <aside class="sidebar-sections">
+        <img src="img/777.png" alt="my photo" />
+        <!--Contacts section-->
+        <div class="contacts-section">
+          <h3 class="sidebar-section">Contacts</h3>
+          <div>
+            <span class="contact-section-type">C:</span>
+            <a href="tel:+375295663845" class="contact-section-link"
+              >tel:+375295663845</a
+            >
+          </div>
+          <div>
+            <span class="contact-section-type">E:</span>
+            <a href="mailto:abirul@mail.ru" class="contact-section-link"
+              >abirul@mail.ru</a
+            >
+          </div>
+        </div>
+        <!--Tech skills section-->
+        <div class="tech-skills-section">
+          <h3 class="sidebar-section">Tech Skills</h3>
+          <ul class="tech-skills-list">
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">HTML5</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">CSS3</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">GIT</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">WebPack</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">JavaScript</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">React.js</span>
+            </li>
+            <li class="tech-skills-item">
+              <span class="tech-skills-item-text">Node.js</span>
+            </li>
+          </ul>
+        </div>
+        <!--Soft skills section-->
+        <div class="soft-skills-section">
+          <h3 class="sidebar-section">Soft Skills</h3>
+          <ul class="soft-skills-list">
+            <li class="soft-skills-item">
+              <span class="soft-skills-item-text">Scrum</span>
+            </li>
+            <li class="soft-skills-item">
+              <span class="soft-skills-item-text">Agile</span>
+            </li>
+            <li class="soft-skills-item">
+              <span class="soft-skills-item-text">GTD</span>
+            </li>
+            <li class="soft-skills-item">
+              <span class="soft-skills-item-text">Teamwork</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
